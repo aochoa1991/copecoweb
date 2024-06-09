@@ -1,0 +1,59 @@
+---
+import directus from "../lib/directus";
+import { readSingleton } from "@directus/sdk";
+
+const header = await directus.request(readSingleton("header"));
+---
+
+<header id="header" class="fixed-top">
+    <div class="container-fluid d-flex align-items-center">
+  
+  <!-- <h1 class="logo me-auto"><a href="index.html"><span>Co</span>peco</a></h1> -->
+  <!-- Uncomment below if you prefer to use an image logo -->
+  <a href="/" class="logo1 me-auto me-lg-0"><img  src={`https://data.copeco.gob.hn/assets/${header.Logo}`} alt="" class="img-fluid"></a>
+  <h1 class="logo me-auto"><a href="/"><span>Co</span>peco</a></h1>
+  <nav id="navbar" class="navbar order-last order-lg-0">
+    
+    <ul>
+      <li><a href="/" class="active">Home</a></li>
+
+      <li class="dropdown"><a href="#"><span>Acerca de Nosotros</span> <i class="bi bi-chevron-down"></i></a>
+        <ul>
+          <!-- <li><a href="misionyvision">vision y mision</a></li> -->
+          
+          <li class="dropdown"><a href="#"><span>Oficinas</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a href="/regionales">Mapa Oficinas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li class="dropdown"><a href="#"><span>Acceso a sistemas</span><i class="bi bi-chevron-down"></i></a>
+        <ul>
+            <li><a href="https://correo.copeco.gob.hn">CORREO<i class="bi bi-envelope"></i></a></li>
+            <li><a href="http://cenaos.copeco.gob.hn">CENAOS<i class="bi bi-cloud"></i></a></li>
+            <li><a href="https://data.copeco.gob.hn/admin/login">SISTEMAS DE EMERGENCIA<i class="bi bi-exclamation-octagon"></i></a></li>
+            <li><a href="http://acciones.copeco.gob.hn/BodegaCopeco/">BODEGAS<i class="bi bi-shop"></i></a></li>
+            <li><a href="http://geonode.copeco.gob.hn">GEOPORTAl<i class="bi bi-geo-alt"></i></a></li>
+            <li><a href="http://cenicac.copeco.gob.hn">CENICAC<i class="bi bi-book"></i></a></li>
+        </ul>
+    </li>
+      <li><a href="https://portalunico.iaip.gob.hn/portal=339">Portal de Transparencia</a></li>
+      <li><a href="servicios">Servicios en linea</a></li>
+      
+    </ul>
+    <i class="bi bi-list mobile-nav-toggle" ></i>
+    
+  </nav><!-- .navbar -->
+  <div class="header-social-links d-flex">
+    <a href="https://twitter.com/CopecoHonduras1" class="twitter"><i class="bu bi-twitter"></i></a>
+    <a href="https://www.facebook.com/HondurasCopeco" class="facebook"><i class="bu bi-facebook"></i></a>
+    <a href="https://www.instagram.com/copecohn/?hl=es-la#" class="instagram"><i class="bu bi-instagram"></i></a>
+  </div>
+
+    </div>
+    
+    
+    
+  </header><!-- End Header -->

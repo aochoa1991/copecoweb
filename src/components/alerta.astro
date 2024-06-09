@@ -1,0 +1,8 @@
+---
+import directus from "../lib/directus";
+import { readSingleton } from "@directus/sdk";
+
+const alerta = await directus.request(readSingleton("alerta"));
+---
+
+

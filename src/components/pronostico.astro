@@ -1,0 +1,59 @@
+---
+import directus from "../lib/directus";
+import { readSingleton } from "@directus/sdk";
+
+const url = 'https://data.copeco.gob.hn';
+const pronostico = await directus.request(readSingleton("pronostico"));
+---
+<!-- src={`${url}/assets/${pronostico.imagen1}`} -->
+<style>
+   .img-fluid{
+    width: 100%;
+   } 
+   .member {
+   padding: auto;
+   margin: 10px;
+   display: block;
+   width: auto;
+   height: 600px;
+   /* // border: 2px solid;
+   // border-radius: 5px; */
+   box-shadow: 10px 5px 5px rgb(228, 216, 216);
+ }
+ 
+</style>
+
+
+<div class="container-fluid">
+    
+</div>
+ <swiper-container class="mySwiper" navigation="true" autoplay-delay="3500" autoplay-disable-on-interaction="false">
+
+    
+                <swiper-slide>
+                    <img class="img-fluid" src={`${url}/assets/${pronostico.imagen1}`} alt="">
+                </swiper-slide>
+                <swiper-slide>
+                     <img class="img-fluid" src={`${url}/assets/${pronostico.imagen2}`} alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="img-fluid" src={`${url}/assets/${pronostico.imagen3}`} alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="img-fluid" src={`${url}/assets/${pronostico.imagen4}`} alt="">
+                </swiper-slide>
+              </swiper-container>
+              <br>
+              <div class="container-fluid">
+                <div class="container-fluid" set:html={pronostico.video}>
+            
+                
+
+               
+                     
+                  
+    
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>

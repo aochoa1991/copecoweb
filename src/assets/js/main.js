@@ -171,4 +171,40 @@
     })
   });
 
+  const swiperEl = document.getElementById('mySwiper')
+  Object.assign(swiperEl, {
+    breakpoints: {
+      200: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      590: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      890: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  });
+  // swiperEl.initialize();
+
+
+  const swiperEl2 = document.getElementById('mySwiper2')
+  Object.assign(swiperEl2, {
+    breakpoints: {
+      200: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      590: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      
+    },
+  });
+  
+
 })()

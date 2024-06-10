@@ -1,6 +1,6 @@
 import { createDirectus, rest, } from '@directus/sdk';
 
-type Article = {
+type Articles = {
     id:           number;
     status:       string;
     sort:         null;
@@ -54,7 +54,7 @@ type Pronostico = {
 
 
 type Schema = {
-  article: Article[];
+  articles: Articles[];
   alerta: Alerta;
   header: Header;
   pronostico: Pronostico;

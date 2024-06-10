@@ -22,30 +22,41 @@ const pronostico = await directus.request(readSingleton("pronostico"));
  }
  
 </style>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script is:inline>
+  AOS.init();
+</script>
 
 
-<div class="container-fluid">
-    
-</div>
- <swiper-container class="mySwiper" navigation="true" autoplay-delay="3500" autoplay-disable-on-interaction="false">
 
-    
-                <swiper-slide>
-                    <img class="img-fluid" src={`${url}/assets/${pronostico.imagen1}`} alt="">
-                </swiper-slide>
-                <swiper-slide>
-                     <img class="img-fluid" src={`${url}/assets/${pronostico.imagen2}`} alt="">
-                </swiper-slide>
-                <swiper-slide>
-                    <img class="img-fluid" src={`${url}/assets/${pronostico.imagen3}`} alt="">
-                </swiper-slide>
-                <swiper-slide>
-                    <img class="img-fluid" src={`${url}/assets/${pronostico.imagen4}`} alt="">
-                </swiper-slide>
-              </swiper-container>
-              <br>
-              <div class="container-fluid">
-                <div class="container-fluid" set:html={pronostico.video}>
+<section id="team" class="team section-bg" data-aos="fade-up"  data-aos-delay="300" >
+    <div class="container-fluid">
+        <div class="section-title" >
+            <h2>Pronostico<strong> Del clima </strong></h2>
+            <p></p>
+          </div>
+          <swiper-container class="mySwiper" id="mySwiper2" navigation="true" autoplay-delay="3500" autoplay-disable-on-interaction="false" slides-per-view="2" space-between="30">
+            <swiper-slide>
+                <img class="img-fluid" src={`${url}/assets/${pronostico.imagen1}`} alt="">
+            </swiper-slide>
+            <swiper-slide>
+                 <img class="img-fluid" src={`${url}/assets/${pronostico.imagen2}`} alt="">
+            </swiper-slide>
+            <swiper-slide>
+                <img class="img-fluid" src={`${url}/assets/${pronostico.imagen3}`} alt="">
+            </swiper-slide>
+            <swiper-slide>
+                <img class="img-fluid" src={`${url}/assets/${pronostico.imagen4}`} alt="">
+            </swiper-slide>
+          </swiper-container>
+          <br>
+          <div class="container-fluid">
+            <div class="container-fluid" set:html={pronostico.video}>
+    </div>
+</section>
+
+
             
                 
 

@@ -1,0 +1,38 @@
+---
+import { any } from "astro/zod";
+import directus from "../../lib/directus";
+import { readItems, readItem } from "@directus/sdk";
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const { id } = Astro.params;
+  const articles = await directus.request(readItem("articles", id!));
+---
+
+<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script is:inline>
+     AOS.init();
+   </script>
+
+
+<BaseLayout>
+  <section id="team" class="team section-bg">
+    <div class="container">
+      <div class="section-title " data-aos="fade-up">
+        <h1><strong>{articles.title}</title></strong></h1>
+        <div set:html={articles.body} class="container-fluid"></div>
+      </div>
+      
+
+    </div>                                                                                                                                                                                                                 
+   
+    
+
+
+  </section>
+  
+   
+ 
+    
+</BaseLayout>
+

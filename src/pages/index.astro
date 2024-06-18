@@ -1,20 +1,28 @@
 ---
-import Layout from '../layouts/Layout.astro';
+
 import Card from '../components/Card.astro';
-import Home from '../layouts/home.astro';
+import Home from '../layouts/BaseLayout.astro';
 import Carouselmv from '../components/carouselmv.astro';
 import Pronostico from '../components/pronostico.astro';
 import Noticias from '../components/noticias.astro';
+import Alerta from '../components/alerta.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Aliados from '../components/aliados.astro'
+import Direcciones from '../components/direcciones.astro'
+
+
 ---
 
 
-<Home>
+<BaseLayout>
+
 	<Carouselmv/>
-	<br>
+	<Alerta/>
 	<Pronostico/>
-	<main>
-		<Noticias/>
-	</main>
-</Home>
+	
+	<Noticias/>
+	<Direcciones/>
+	<Aliados/>
+</BaseLayout>
 
 

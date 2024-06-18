@@ -1,17 +1,25 @@
-/**
-* Template Name: Company
-* Updated: May 30 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
+ /* Template Name: Company
+Updated: May 30 2023 with Bootstrap v5.3.0
+ Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
+ Author: BootstrapMade.com
+ License: https://bootstrapmade.com/license/
+  */
 
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #4d4643;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -31,6 +39,12 @@ h4,
 h5,
 h6 {
   font-family: "Roboto", sans-serif;
+}
+
+#main{
+
+  padding-top: 150px;
+
 }
 
 /*--------------------------------------------------------------
@@ -84,6 +98,9 @@ h6 {
   z-index: 997;
   padding: 15px 0;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0px;
+  
 }
 
 #header .logo {

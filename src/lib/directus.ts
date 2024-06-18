@@ -55,7 +55,7 @@ type Pronostico = {
 
 type Schema = {
   articles: Articles[];
-  alerta: Alerta;
+  alertas: Alerta;
   header: Header;
   pronostico: Pronostico;
 }

@@ -59,7 +59,8 @@
       <swiper-container class="mySwiper" id="mySwiper"  navigation="true"  space-between="30"
         slides-per-view="2" autoplay-delay="5000" autoplay-disable-on-interaction="false"  >
         {posts.map((post)=>
-            <swiper-slide><div class="member card rounded" >
+            <swiper-slide>
+                <div class="member card rounded" >
               <img
                     src=`https://data.copeco.gob.hn/assets/${post.cover_image};`
                     class="member-img card-img-top"
@@ -85,7 +86,8 @@
               
               
             </div>
-        </div></swiper-slide>
+        </div>
+        </swiper-slide>
        )}
        
       </swiper-container>

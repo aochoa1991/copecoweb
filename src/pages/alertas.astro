@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+
+import directus from "../lib/directus";
+import { readSingleton } from "@directus/sdk";
+
+const alertas = await directus.request(readSingleton("alertas"));
+
+---
+
+
+<BaseLayout>
+
+    <section id="team" class="team section-bg">
+        <div class="container text-center">
+          <div class="section-title" data-aos="fade-up">
+            <h1><strong>{alertas.titulo}</strong></h1>
+            <p></p>
+          </div>
+          <div class="container">
+              
+              <img class="img-fluid" src={`https://data.copeco.gob.hn/assets/${alertas.imagen1}`} />
+              <img class="img-fluid" src={`https://data.copeco.gob.hn/assets/${alertas.imagen2}`} />
+              <img class="img-fluid" src={`https://data.copeco.gob.hn/assets/${alertas.imagen3}`} />
+          </div>
+          
+  
+        </div>
+       
+        
+    
+    
+      </section>
+
+</BaseLayout>

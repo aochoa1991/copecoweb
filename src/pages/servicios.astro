@@ -1,0 +1,178 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+
+import cenicac from '../assets/img/cenicac.png'
+
+import dgp from '../assets/img/prevencion.png'
+
+
+
+---
+<script >
+
+import { readItems } from "@directus/sdk";
+import directus from "../lib/directus";
+
+
+const btn = document.getElementById('btn') // capturo al botón...
+
+
+
+const displayData = ()=>{
+
+}
+
+
+const Expediente = async()=>{
+  try {
+  
+  const input = (document.getElementById('input') as HTMLInputElement )?.value ;
+  
+  const expediente = await directus.request(
+  readItems("expedientes", {
+    fields: [
+      "status",
+      "TIPO_EXPEDIENTE",
+      "NUMERO_DE_EXPEDIENTE",
+      "Observaciones",
+      "Dirreccion"
+    ],
+      filter: {
+        NUMERO_DE_EXPEDIENTE:{
+        _eq: input,
+      },
+    },
+  })
+);
+var data = JSON.stringify(expediente)
+if (data == '[]') {
+  alert('escribe un numero de expediente valido')
+}else{
+  alert(data)
+}
+  }  catch(error){
+      alert('escribe el numero de expediente')
+  }
+  
+}
+btn?.addEventListener("click", Expediente);
+</script>
+
+
+
+
+<BaseLayout>
+  <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <div class="section-title">
+            <h2>Servicios en linea Brindandos Por COPECO</h2>
+          </div>
+    
+          <p class="lead text-muted">
+            Aqui encontraras los requisitos Necesarios para los distintos servicios
+            brindados Por la Institucion.
+          </p>
+          <!-- <p>
+              <a href="#" class="btn btn-primary my-2"></a>
+              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            </p>// -->
+        </div>
+      </div>
+    </section>
+    <section id="clients" class="clients">
+      <div class="album py-2 bg-light">
+        <div class="container-fluid">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-1">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  class="bd-placeholder-img card-img-top"
+                  width="100%"
+                  height="500"
+                  src={cenicac.src}
+                  alt=""
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Requisitos Para Una Evaluacion de Direccion de Gestion de la
+                    Prevencion
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a
+                       href="/img/requisitos.pdf"
+                      >
+                        <button
+                          
+                          class="btn btn-primary"
+                        >
+                          <i class="fa fa-download"></i> Download
+                        </button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img
+                  class="bd-placeholder-img card-img-top"
+                  width="100%"
+                  height="500"
+                  src={dgp.src}
+                  alt=""
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    Requisitos Para Gestiones realizadas Por CENICAC centro nacional
+                    de Capacitaciones.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a
+                      href="../assets/img/prevencion.png" 
+                      >
+                        <button
+                          
+                          class="btn btn-primary"
+                        >
+                          <i class="fa fa-download"></i> Download
+                        </button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div
+              class="col container-fluid d-flex  flex-row"
+            >
+              <div class="col-auto">
+                <h3>Vea el estado de sus Solicitudes</h3>
+    
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="COPECOSGRD-000-0000"
+                  aria-label=".form-control-lg example"
+                  
+                  type="text"
+                  name=""
+                  id="input"
+                />
+                <button id="btn" class="btn btn-primary" type="submit">
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+</BaseLayout>

@@ -52,12 +52,31 @@ type Pronostico = {
     video2:  string;
 }
 
+type expedientes = {
+    id: number
+    status: string
+    sort: any
+    user_created: string
+    date_created: string
+    user_updated: string
+    date_updated: string
+    FECHA: string
+    TIPO_EXPEDIENTE: string
+    NUMERO_DE_EXPEDIENTE: string
+    Observaciones: string
+    Dirreccion: string
+    Correo_electronico: any
+    Numero_de_Telefono: any
+    Nombre_del_expediente: any
+}
+
 
 type Schema = {
   articles: Articles[];
   alertas: Alerta;
   header: Header;
   pronostico: Pronostico;
+  expedientes: expedientes[];
 }
 
 const directus = createDirectus<Schema>('https://data.copeco.gob.hn').with(rest());

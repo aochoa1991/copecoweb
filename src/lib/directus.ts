@@ -52,7 +52,7 @@ type Pronostico = {
     video2:  string;
 }
 
-type expedientes = {
+type EXPEDIENTES = {
     id: number
     status: string
     sort: any
@@ -76,7 +76,7 @@ type Schema = {
   alertas: Alerta;
   header: Header;
   pronostico: Pronostico;
-  expedientes: expedientes[];
+  EXPEDIENTES: EXPEDIENTES[];
 }
 
 const directus = createDirectus<Schema>('https://data.copeco.gob.hn').with(rest());

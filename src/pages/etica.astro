@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import directus from "../lib/directus";
+import { readSingleton } from "@directus/sdk";
+
+const probidad = await directus.request(readSingleton("comite_probidad_y_etica"));
+const url = "https://data.copeco.gob.hn/assets/";
+
+---
+
+<BaseLayout>
+
+<div class="container-fluid">
+
+    <img src=`${url}${probidad.imagen_comite}` class="img-fluid" alt="">
+</div>
+
+
+</BaseLayout>

@@ -13,6 +13,7 @@ Updated: May 30 2023 with Bootstrap v5.3.0
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 body {
@@ -158,6 +159,7 @@ h6 {
   .header-social-links {
     padding: 0 15px 0 0;
     border-left: 0;
+    display: none;
   }
 }
 
@@ -2097,7 +2099,9 @@ section {
 #footer {
   color: #fff;
   font-size: 14px;
-  background: #111;
+  background: #88cfe0;
+
+  
 }
 
 #footer .footer-top {
@@ -2226,14 +2230,14 @@ section {
 #footer .credits {
   padding-top: 5px;
   font-size: 13px;
-  color: #fff;
+  color: #9f0d0d;
 }
 
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
   background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  color: #ffffff;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -2246,7 +2250,7 @@ section {
 
 #footer .social-links a:hover {
   background: #1bbd36;
-  color: #fff;
+  color: #090606;
   text-decoration: none;
 }
 

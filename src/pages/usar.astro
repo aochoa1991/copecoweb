@@ -1,0 +1,116 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import directus from "../lib/directus";
+import { readSingleton } from "@directus/sdk";
+
+const dcgen = await directus.request(readSingleton("DCGNE"));
+const url = "https://data.copeco.gob.hn/assets/";
+---
+
+<style>
+  .col {
+    margin-right: 20px;
+  }
+  .usar {
+    padding-top: 60px;
+  }
+</style>
+
+<BaseLayout>
+  <section id="about" class="about section">
+
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+          <p class="who-we-are">USAR</p>
+          <h3>Que es el programa USAR HONDURAS</h3>
+          <p class="fst-italic">
+            {dcgen.usar_definicion}
+          </p>
+          <!-- <ul>
+            <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+          </ul> -->
+          
+        </div>
+
+        <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-4">
+            <div class="col-lg-12">
+              <img src=`${url}${dcgen.imagen_usar}`class="img-fluid" alt="">
+            </div>
+            <!-- <div class="col-lg-6">
+              <div class="row gy-4">
+                <div class="col-lg-12">
+                  <img src=`${url}${dcgen.imagen_usar}` class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-12">
+                  <img src=`${url}${dcgen.imagen_usar}` class="img-fluid" alt="">
+                </div>
+              </div>
+            </div> -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- /About Section -->
+  <section id="featured-services" class="featured-services section light-background">
+
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-item d-flex">
+            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+            <div>
+              <h4 class="title"><a href="/parnuh" class="stretched-link">PARNUH</a></h4>
+              <p class="description">Proceso de Acreditación y Reacreditación Nacional USAR Honduras</p>
+            </div>
+          </div>
+        </div>
+        <!-- End Service Item -->
+
+        <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-item d-flex">
+            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+            <div>
+              <h4 class="title"><a href="/scuh" class="stretched-link">SCUH</a></h4>
+              <p class="description">Sistema de Coordinación USAR Honduras</p>
+            </div>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-item d-flex">
+            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+            <div>
+              <h4 class="title"><a href="/capacidades" class="stretched-link">CAPACIDADES</a></h4>
+              <p class="description">Fortalecimiento de capacidades
+              </p>
+            </div>
+          </div>
+        </div><!-- End Service Item -->
+        
+        <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-item d-flex">
+            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+            <div>
+              <h4 class="title"><a href="/equipousar" class="stretched-link">USAR</a></h4>
+              <p class="description">Equipo USAR</p>
+            </div>
+          </div>
+        </div><!-- End Service Item -->
+
+      </div>
+
+    </div>
+
+  </section><!-- /Featured Services Section -->
+</BaseLayout>

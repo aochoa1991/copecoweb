@@ -6,14 +6,15 @@ import { readSingleton } from "@directus/sdk";
 const dcgen = await directus.request(readSingleton("DCGNE"));
 const url = "https://data.copeco.gob.hn/assets/";
 ---
-
 <style>
-  .col {
-    margin-right: 20px;
+  .insaragag{
+    width: 300px;
+    height: 100px;
   }
-  .usar {
-    padding-top: 60px;
-  }
+
+.container{
+  padding-bottom: 30px;
+}
 </style>
 
 <BaseLayout>
@@ -59,58 +60,140 @@ const url = "https://data.copeco.gob.hn/assets/";
       </div>
 
     </div>
-  </section><!-- /About Section -->
-  <section id="featured-services" class="featured-services section light-background">
-
-    <div class="container">
-
-      <div class="row gy-4">
-
-        <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-item d-flex">
-            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
-            <div>
-              <h4 class="title"><a href="/parnuh" class="stretched-link">PARNUH</a></h4>
-              <p class="description">Proceso de Acreditación y Reacreditación Nacional USAR Honduras</p>
-            </div>
+    
+      <!-- ======= Our Team Section ======= -->
+      <section id="team" class="team section-bg">
+        <div class="container ">
+  
+          <div class="section-title d-flex justify-content-center" data-aos="fade-up">
+            <h2>Puntos  <strong>Focales</strong></h2>
+            <p></p>
           </div>
+  
+          <div class="row d-flex justify-content-center">
+  
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member" data-aos="fade-up">
+                <div class="member-img">
+                  <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                  
+                </div>
+                <div class="member-info">
+                  <h4>Punto Focal Político Nacional</h4>
+                  <h4>ViceAlmirante &#174;  Jose Jorge Fortin </h4>
+                  <span>Secretario de Estado en los Despachos de Gestión de Riesgos y Contingencias Nacionales COPECO</span>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member" data-aos="fade-up" data-aos-delay="100">
+                <div class="member-img">
+                  <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                  
+                </div>
+                <div class="member-info">
+                  <h4>Punto Focal Operativo Nacional</h4>
+                  <h4>Ing. Ivan Montalvo</h4>
+                  <span> Director Nacional de Preparación y Respuesta</span>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member" data-aos="fade-up" data-aos-delay="200">
+                <div class="member-img">
+                  <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                  
+                </div>
+                <div class="member-info">
+                  <h4>Punto Focal USAR Nacional</h4>
+                  <h4> 
+                  </h4>
+                  <span>Departamento de Coordinación para Grupos Nacionales Especializados</span>
+                  <span>contacto: dcgne.copeco@gmail.com</span>
+                </div>
+              </div>
+            </div>
+  
+           
+  
+          </div>
+  
         </div>
-        <!-- End Service Item -->
+      </section><!-- End Our Team Section -->
 
-        <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-item d-flex">
-            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
-            <div>
-              <h4 class="title"><a href="/scuh" class="stretched-link">SCUH</a></h4>
-              <p class="description">Sistema de Coordinación USAR Honduras</p>
-            </div>
-          </div>
-        </div><!-- End Service Item -->
 
-        <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-item d-flex">
-            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
-            <div>
-              <h4 class="title"><a href="/capacidades" class="stretched-link">CAPACIDADES</a></h4>
-              <p class="description">Fortalecimiento de capacidades
-              </p>
+      <section id="team" class="team section-bg">
+        <div class="container">
+          <div class="row gy-4 ">
+            <h1 class="text-center">Lineas de Accion</h1>
+            <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-item d-flex member">
+                <div class="icon align-items-center"><i class="bi bi-briefcase"></i></div>
+                <div class="member-info">
+                  <h4 class="title"><a href="/parnuh" class="stretched-link">PARNUH</a></h4>
+                  <p class="description">Proceso de Acreditación y Reacreditación Nacional USAR Honduras</p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div><!-- End Service Item -->
-        
-        <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-item d-flex">
-            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
-            <div>
-              <h4 class="title"><a href="/equipousar" class="stretched-link">USAR</a></h4>
-              <p class="description">Equipo USAR</p>
-            </div>
-          </div>
-        </div><!-- End Service Item -->
+            <!-- End Service Item -->
+      
+            <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-item d-flex member">
+                <div class="icon d-flex "><i class="bi bi-card-checklist d-flex alig"></i></div>
+                <div>
+                  <h4 class="title"><a href="/scuh" class="stretched-link">SCUH</a></h4>
+                  <p class="description">Sistema de Coordinación USAR Honduras</p>
+                </div>
+              </div>
+            </div><!-- End Service Item -->
+      
+            <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-item d-flex member">
+                <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+                <div>
+                  <h4 class="title"><a href="/capacidades" class="stretched-link">FORTALECIMIENTO</a></h4>
+                  <p class="description">Fortalecimiento de capacidades
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Service Item -->
+            
+            <div class="col-xl-4 col-lg-6 " data-aos="fade-up" data-aos-delay="300">
+              <div class="service-item d-flex member">
+                <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+                <div>
+                  <h4 class="title"><a href="/equipousar" class="stretched-link">USAR</a></h4>
+                  <p class="description">Grupo Nacional Especializados GNE USAR</p>
+                </div>
+              </div>
+            </div><!-- End Service Item -->
+      
+        </div>
+        </div>
+       </section>
+  </section><!-- /About Section -->
+ 
+  
+    
 
+     
+    
+
+
+    <section id="clients" class="clients">
+      <div class="container" data-aos="fade-up">
+    
+        <div class="section-title">
+          <h2>Aliados</h2>
+        </div>
+    
+        <div class="container text-center">
+          <img src=`${url}${dcgen.imagen_aliados}`class="insaragag" alt="">
+        </div>
+        </div>
       </div>
+    </section>
 
-    </div>
-
-  </section><!-- /Featured Services Section -->
 </BaseLayout>

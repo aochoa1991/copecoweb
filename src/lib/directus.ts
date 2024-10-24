@@ -103,6 +103,7 @@ type DCGNE = {
     imagen_scuh:             string;
     ciclo_operaciones_usar:             string;
     grupo_usar_acreditados:             string;
+    imagen_aliados:                    string;
 }
 
 type comite_probidad_y_etica = {

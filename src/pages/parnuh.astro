@@ -21,8 +21,21 @@ const url = "https://data.copeco.gob.hn/assets/";
 
 <BaseLayout>
     <section id="about" class="about section">
+      <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
   
+          <div class="d-flex justify-content-between align-items-center">
+            <h2>USAR</h2>
+            <ol>
+              <li><a href="/usar">regresar</a></li>
+              
+            </ol>
+          </div>
+  
+        </div>
+      </section><!-- End Breadcrumbs -->
       <div class="container">
+        
   
         <div class="row gy-4">
   
@@ -43,7 +56,7 @@ const url = "https://data.copeco.gob.hn/assets/";
           <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
             <div class="row gy-4">
               <div class="col-lg-12">
-                <img src=`${url}${dcgen.imagen_usar}`class="img-fluid" alt="">
+                <img src=`${url}${dcgen.imagen_usar}`class="img-fluid " alt="">
               </div>
               <!-- <div class="col-lg-6">
                 <div class="row gy-4">
@@ -62,33 +75,9 @@ const url = "https://data.copeco.gob.hn/assets/";
         </div>
   
       </div>
-    </section><!-- /About Section -->
-      <!-- Features Details Section -->
-      <section id="features-details" class="features-details section">
 
-        <div class="container">
-  
-          <div class="row gy-4 justify-content-between features-item">
-  
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <img src=`${url}${dcgen.parches_usar}` class="img-fluid" alt="">
-            </div>
-  
-            <div class="col-lg-5 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
-              <div class="content">
-                <h3>PARCHES USAR</h3>
-                <p>
-                 
-                </p>
-                
-              </div>
-            </div>
-  
-          </div><!-- Features Item -->
-  
-          <!-- Features Item -->
-  
-        </div>
-  
-      </section><!-- /Features Details Section -->
+
+    </section><!-- /About Section -->
+    
+    
   </BaseLayout>

@@ -3,11 +3,11 @@ import node from "@astrojs/node";
 
 import react from "@astrojs/react";
 
+import vercel from "@astrojs/vercel";
+
 // https://astro.build/config
 export default defineConfig({
   output: "server",
-  adapter: node({
-    mode: "standalone"
-  }),
+  adapter: vercel(),
   integrations: [react()]
 });
